@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import math
 from collections import defaultdict
-from typing import Iterable, Sequence
+from collections.abc import Iterable, Sequence
 
 from .models import Pair
 

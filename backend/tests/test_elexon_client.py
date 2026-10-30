@@ -1,6 +1,6 @@
-from app.elexon_client import parse_actuals, parse_forecasts, parse_ts
-
 from conftest import ts
+
+from app.elexon_client import parse_actuals, parse_forecasts, parse_ts
 
 
 def test_parse_ts_handles_z_suffix_and_offsets():
@@ -10,10 +10,11 @@ def test_parse_ts_handles_z_suffix_and_offsets():
 
 
 def test_parse_actuals_keeps_wind_only_and_latest_publication():
+    t10, p1, p2 = "2026-01-05T10:00:00Z", "2026-01-05T10:35:00Z", "2026-01-05T11:35:00Z"
     rows = [
-        {"fuelType": "CCGT", "startTime": "2026-01-05T10:00:00Z", "generation": 999, "publishTime": "2026-01-05T10:35:00Z"},
-        {"fuelType": "WIND", "startTime": "2026-01-05T10:00:00Z", "generation": 5000, "publishTime": "2026-01-05T10:35:00Z"},
-        {"fuelType": "WIND", "startTime": "2026-01-05T10:00:00Z", "generation": 5100, "publishTime": "2026-01-05T11:35:00Z"},
+        {"fuelType": "CCGT", "startTime": t10, "generation": 999, "publishTime": p1},
+        {"fuelType": "WIND", "startTime": t10, "generation": 5000, "publishTime": p1},
+        {"fuelType": "WIND", "startTime": t10, "generation": 5100, "publishTime": p2},
         {"fuelType": "WIND", "startTime": "2026-01-05T10:30:00Z", "generation": None},
     ]
     out = parse_actuals(rows)

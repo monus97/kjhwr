@@ -99,7 +99,7 @@ def decision_view(ds: Dataset, delivery_day: date, decision_clock: time) -> dict
     pairs = pairs_for_decision(ds.actuals, ds.index, day_start, day_end, decision_at)
     quants = error_quantiles(ds)
     series = _series(pairs)
-    for row, p in zip(series, pairs):
+    for row, p in zip(series, pairs, strict=True):
         row["band_low"] = row["band_high"] = None
         if p.forecast_mw is None or p.lead_hours is None:
             continue

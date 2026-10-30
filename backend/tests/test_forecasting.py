@@ -2,11 +2,10 @@
 from datetime import timedelta
 
 import pytest
+from conftest import ts
 
 from app.forecasting import ForecastIndex, actuals_to_dict, pairs_for_decision, pairs_for_horizon
 from app.models import Forecast
-
-from conftest import ts
 
 
 def _world(tiny_world):

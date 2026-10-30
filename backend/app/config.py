@@ -2,10 +2,9 @@
 from __future__ import annotations
 
 import os
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
-UTC = timezone.utc
 
 # --- Elexon BMRS (Insights Solution) API -----------------------------------
 ELEXON_BASE_URL = os.getenv("ELEXON_BASE_URL", "https://data.elexon.co.uk/bmrs/api/v1")

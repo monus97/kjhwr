@@ -20,7 +20,7 @@ from __future__ import annotations
 from bisect import bisect_right
 from collections import defaultdict
 from datetime import datetime, timedelta
-from typing import Callable, Iterable, Sequence
+from collections.abc import Callable, Iterable, Sequence
 
 from .models import Actual, Forecast, Pair
 
@@ -59,7 +59,7 @@ class ForecastIndex:
 
     def all_for(self, target: datetime) -> list[tuple[datetime, float]]:
         pubs = self._publish_times.get(target, [])
-        return list(zip(pubs, self._values.get(target, [])))
+        return list(zip(pubs, self._values.get(target, []), strict=True))
 
 
 def _pair_up(

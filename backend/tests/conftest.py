@@ -1,5 +1,5 @@
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import pytest
@@ -7,8 +7,6 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from app.models import Actual, Forecast  # noqa: E402
-
-UTC = timezone.utc
 
 
 def ts(day: int, hour: int, minute: int = 0, month: int = 1) -> datetime:

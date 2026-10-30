@@ -2,14 +2,13 @@
 from datetime import timedelta
 
 import pytest
+from conftest import ts
 from starlette.testclient import TestClient
 
 from app import data_store
 from app.data_store import build_dataset
 from app.main import app
 from app.models import Actual, Forecast
-
-from conftest import ts
 
 
 @pytest.fixture(autouse=True)

@@ -1,11 +1,10 @@
 import math
 
 import pytest
+from conftest import ts
 
 from app.metrics import by_hour_of_day, error_histogram, quantile, summarize
 from app.models import Pair
-
-from conftest import ts
 
 
 def _pair(hour, actual, forecast, minute=0):

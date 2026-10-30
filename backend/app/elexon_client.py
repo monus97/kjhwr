@@ -7,8 +7,9 @@ from __future__ import annotations
 
 import logging
 import time
+from collections.abc import Iterable, Iterator
 from datetime import datetime, timedelta
-from typing import Any, Iterable, Iterator
+from typing import Any
 
 import requests
 

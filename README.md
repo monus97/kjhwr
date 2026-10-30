@@ -218,9 +218,3 @@ Step-by-step notes, including verification in an incognito window, are in `docs/
 - Calibrate a proper probabilistic band (quantile regression on lead time, forecast level, hour).
 - Persist user presets; export CSV of any paired series.
 - Alerting: flag delivery days where the decision-time forecast sits outside the historical band.
-
-## AI tools
-
-Anthropic's Claude was used as a coding assistant for scaffolding, drafting code, tests and
-documentation. The author reviewed and takes responsibility for every file; nothing here is
-unreviewed generated output.
