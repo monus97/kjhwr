@@ -19,8 +19,8 @@ from __future__ import annotations
 
 from bisect import bisect_right
 from collections import defaultdict
-from datetime import datetime, timedelta
 from collections.abc import Callable, Iterable, Sequence
+from datetime import datetime, timedelta
 
 from .models import Actual, Forecast, Pair
 
