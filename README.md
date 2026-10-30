@@ -9,7 +9,7 @@ using only Elexon BMRS national wind data:
 2. **How much should we trust it?** Quantify forecast error (MAE, RMSE, bias, P10/P50/P90) for
    any window in January and any forecast horizon from 0 to 48 hours, so the desk can size a buffer.
 
-**Live app:** `https://<your-deployment>.vercel.app` ← *replace after deploying (see below)*
+**Live app:** `https://kjhwr-hazel.vercel.app` ← *replace after deploying (see below)*
 
 > AI assistance: this codebase was written with the help of an AI coding assistant (Anthropic's
 > Claude). All design decisions, the forecast-selection rule, tests and this README were reviewed by
