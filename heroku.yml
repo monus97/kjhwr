@@ -1,0 +1,5 @@
+# Heroku container deploy:
+#   heroku create <random-name> && heroku stack:set container && git push heroku main
+build:
+  docker:
+    web: Dockerfile
